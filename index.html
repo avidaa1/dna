@@ -408,7 +408,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
   <div id="hudwrap">
     <div class="hud" id="hud-tl">
       <div class="box">
-        <h4>REPRESENTATION</h4>
+        <h4 id="s-representation">REPRESENTATION</h4>
         <div class="mbar" style="margin-bottom:9px">
           <button class="mb on" id="md-schem" onclick="setModel('ref')">SCHEMATIC</button>
           <button class="mb" id="md-atom" onclick="setModel('atomic')">ATOMIC</button>
@@ -421,7 +421,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 
     <div class="hud" id="hud-tr">
       <div class="box">
-        <h4>READOUT</h4>
+        <h4 id="s-readout">READOUT</h4>
         <div class="row"><span>MODEL</span><b id="rd-model">B-DNA</b></div>
         <div class="row"><span>RUNGS</span><b id="rd-rungs">32</b></div>
         <div class="row"><span>TURNS</span><b id="rd-turns">--</b></div>
@@ -433,7 +433,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 
     <div class="hud" id="hud-bl">
       <div class="box" id="narrator-box">
-        <h4>HELIX NARRATOR</h4>
+        <h4 id="s-helix-narrator">HELIX NARRATOR</h4>
         <div id="narr" style="color:#9fb0bd;line-height:1.75;letter-spacing:.6px">Click any base pair in the helix to inspect it.</div>
       </div>
     </div>
@@ -456,42 +456,42 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== STAGE ===== -->
 <section class="page on" id="page-stage">
   <p class="kick">01 &middot; THE MOLECULE</p>
-  <h2 class="hd">A double helix you can take apart</h2>
+  <h2 class="hd" id="s-a-double-helix-you-can-take-apart">A double helix you can take apart</h2>
   <p class="sub">Two antiparallel sugar-phosphate backbones winding around a shared axis, with base pairs stacked between them. Every element is separable: toggle a base type off and watch which rungs vanish, or click a rung and the narrator describes that pairing, its hydrogen bonds and its position along the axis. The READOUT panel reports the geometry actually measured from whichever model is loaded &mdash; turns and base pairs per turn are fitted from the backbone, not assumed.</p>
 
   <div class="grid">
     <div class="card">
-      <h3>Three models, only one to scale</h3>
+      <h3 id="s-three-models-only-one-to-scale">Three models, only one to scale</h3>
       <p><b>Schematic</b> is a scanned 32-pair model with every base resolved by colour. <b>Atomic</b> is a ball-and-stick build of 37 pairs &mdash; spheres for atom centres, sticks for bonds, no base identity assigned. Both are artists&rsquo; models: fitting their backbones gives roughly 31 and 25 base pairs per turn with the strands about 180 degrees apart, so they are stylised, loosely wound and effectively symmetric. <b>Synthetic</b> is generated live from your sequence on real B-form constants &mdash; 10.5 pairs per turn, 0.34 nm rise, strands offset 140 degrees &mdash; and is the only one of the three whose proportions and grooves are correct.</p>
       <div class="tagrow"><span class="tg">SCHEMATIC ~31 BP/TURN</span><span class="tg">ATOMIC ~25 BP/TURN</span><span class="tg">SYNTHETIC 10.5 BP/TURN</span></div>
     </div>
     <div class="card">
-      <h3>Two strands, opposite directions</h3>
+      <h3 id="s-two-strands-opposite-directions">Two strands, opposite directions</h3>
       <p>One strand runs 5&prime;&rarr;3&prime;, the other 3&prime;&rarr;5&prime;. That antiparallel arrangement is not decorative &mdash; it is why replication is continuous on one strand and fragmented on the other, and why polymerases only ever build in a single direction.</p>
       <div class="tagrow"><span class="tg">ANTIPARALLEL</span><span class="tg">5&prime; TO 3&prime;</span></div>
     </div>
     <div class="card">
-      <h3>Complementary pairing</h3>
+      <h3 id="s-complementary-pairing">Complementary pairing</h3>
       <p>Adenine binds thymine with two hydrogen bonds. Guanine binds cytosine with three. A purine always faces a pyrimidine, which keeps the helix a constant 2 nanometres wide along its entire length.</p>
       <div class="tagrow"><span class="tg">A=T &middot; 2H</span><span class="tg">G&equiv;C &middot; 3H</span></div>
     </div>
     <div class="card">
-      <h3>Grooves are addresses</h3>
+      <h3 id="s-grooves-are-addresses">Grooves are addresses</h3>
       <p>In real DNA the backbones are not diametrically opposite, so the helix carries a wide major groove and a narrow minor groove. Regulatory proteins read chemical patterns in the major groove without ever unzipping the strands. Turn on GROOVES to trace both channels &mdash; on a model whose strands sit near 180 degrees apart the tracks render in neutral grey, because there is no genuine major or minor to distinguish.</p>
       <div class="tagrow"><span class="tg">MAJOR 2.2 nm</span><span class="tg">MINOR 1.2 nm</span></div>
     </div>
     <div class="card">
-      <h3>Geometry of B-DNA</h3>
+      <h3 id="s-geometry-of-b-dna">Geometry of B-DNA</h3>
       <p>Ten and a half base pairs per full turn, 0.34 nanometres of rise per pair, a 3.4 nanometre pitch, and a right-handed twist. Those four numbers describe almost every DNA molecule in a living cell &mdash; and they are what the synthesizer builds. Compare the fitted BP / TURN in the readout as you switch models.</p>
       <div class="tagrow"><span class="tg">10.5 bp / TURN</span><span class="tg">RIGHT-HANDED</span></div>
     </div>
     <div class="card">
-      <h3>Not the only form</h3>
+      <h3 id="s-not-the-only-form">Not the only form</h3>
       <p>Dehydrated fibres adopt A-DNA: shorter, fatter, still right-handed. Alternating purine-pyrimidine tracts can flip into left-handed Z-DNA, whose zig-zag backbone appears transiently behind active transcription.</p>
       <div class="tagrow"><span class="tg">A-FORM</span><span class="tg">Z-FORM</span></div>
     </div>
     <div class="card">
-      <h3>Scale</h3>
+      <h3 id="s-scale">Scale</h3>
       <p>A single human cell holds roughly two metres of DNA compressed into a nucleus about six micrometres across. Laid end to end, the DNA in one adult body would span the solar system many times over.</p>
       <div class="tagrow"><span class="tg">2 m / CELL</span><span class="tg">3.1 Gbp</span></div>
     </div>
@@ -501,11 +501,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== SYNTH ===== -->
 <section class="page" id="page-synth">
   <p class="kick">02 &middot; SEQUENCE SYNTHESIZER</p>
-  <h2 class="hd">Build a helix from your own sequence</h2>
+  <h2 class="hd" id="s-build-a-helix-from-your-own-sequence">Build a helix from your own sequence</h2>
   <p class="sub">Type or generate a DNA sequence and the synthesizer builds it as real 3D geometry in the stage above &mdash; correct rise, correct twist, correct complementary strand, colour-coded by base. Every rung you see corresponds to one character you entered.</p>
 
   <div class="panel">
-    <h3>Sequence input</h3>
+    <h3 id="s-sequence-input">Sequence input</h3>
     <p class="note">A / T / G / C ONLY &middot; NON-BASE CHARACTERS ARE STRIPPED &middot; MAX 220 BP</p>
     <label class="fl">TEMPLATE STRAND (5&prime; &rarr; 3&prime;)</label>
     <textarea id="syn-seq" spellcheck="false">ATGGCCTTAGGCAACTTCGATCCGAAGCTTACCGGTATCGAAGCATGCTAA</textarea>
@@ -525,11 +525,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== LAB ===== -->
 <section class="page" id="page-lab">
   <p class="kick">03 &middot; ANALYSIS BENCH</p>
-  <h2 class="hd">Offline sequence laboratory</h2>
+  <h2 class="hd" id="s-offline-sequence-laboratory">Offline sequence laboratory</h2>
   <p class="sub">Six analysis engines, all running locally in your browser with no network call and no key. They read the sequence in the synthesizer field and return the same answers a bench tool would.</p>
 
   <div class="panel">
-    <h3>Central dogma compiler</h3>
+    <h3 id="s-central-dogma-compiler">Central dogma compiler</h3>
     <p class="note">DNA &rarr; mRNA &rarr; POLYPEPTIDE &middot; STANDARD GENETIC CODE &middot; ALL THREE READING FRAMES</p>
     <div class="btnrow">
       <button class="btn pri" onclick="runCompiler()">TRANSCRIBE &amp; TRANSLATE</button>
@@ -539,7 +539,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
   </div>
 
   <div class="panel">
-    <h3>Composition &amp; thermodynamics</h3>
+    <h3 id="s-composition-thermodynamics">Composition &amp; thermodynamics</h3>
     <p class="note">GC CONTENT &middot; MELTING TEMPERATURE &middot; MOLECULAR WEIGHT &middot; STRAND METRICS</p>
     <div class="btnrow">
       <button class="btn pri" onclick="runComposition()">ANALYZE</button>
@@ -550,14 +550,14 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
   </div>
 
   <div class="panel">
-    <h3>Restriction mapper</h3>
+    <h3 id="s-restriction-mapper">Restriction mapper</h3>
     <p class="note">SCANS 18 COMMON ENDONUCLEASE RECOGNITION SITES ON BOTH STRANDS</p>
     <div class="btnrow"><button class="btn pri" onclick="runRestriction()">MAP CUT SITES</button></div>
     <div class="out" id="lab-rest">Awaiting run.</div>
   </div>
 
   <div class="panel">
-    <h3>Motif signature matcher</h3>
+    <h3 id="s-motif-signature-matcher">Motif signature matcher</h3>
     <p class="note">SCORES YOUR SEQUENCE AGAINST A LOCAL LIBRARY OF BIOLOGICAL MOTIFS</p>
     <div class="btnrow"><button class="btn pri" onclick="runMotif()">MATCH SIGNATURES</button></div>
     <div class="out" id="lab-motif">Awaiting run.</div>
@@ -567,11 +567,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== MUTATE ===== -->
 <section class="page" id="page-mutate">
   <p class="kick">04 &middot; MUTATION ENGINE</p>
-  <h2 class="hd">Break it on purpose</h2>
+  <h2 class="hd" id="s-break-it-on-purpose">Break it on purpose</h2>
   <p class="sub">Mutation is not an abstraction &mdash; it is one character changing in a string billions of characters long. The engine applies a mutation to your sequence, recompiles the protein, compares it to the original and classifies the damage.</p>
 
   <div class="panel">
-    <h3>Apply a mutation</h3>
+    <h3 id="s-apply-a-mutation">Apply a mutation</h3>
     <p class="note">CLASSIFIES SILENT / MISSENSE / NONSENSE / FRAMESHIFT AGAINST THE ORIGINAL TRANSLATION</p>
     <div class="grid" style="gap:10px;margin-bottom:4px">
       <div><label class="fl">MUTATION TYPE</label>
@@ -598,19 +598,19 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 
   <div class="grid">
     <div class="card">
-      <h3>Silent</h3>
+      <h3 id="s-silent">Silent</h3>
       <p>The base changes, the codon changes, the amino acid does not. The genetic code is redundant &mdash; six different codons all specify leucine. Most third-position changes are silent.</p>
     </div>
     <div class="card">
-      <h3>Missense</h3>
+      <h3 id="s-missense">Missense</h3>
       <p>One amino acid is replaced by another. Sickle cell disease is a single adenine becoming thymine in the beta-globin gene, turning glutamate into valine at position six.</p>
     </div>
     <div class="card">
-      <h3>Nonsense</h3>
+      <h3 id="s-nonsense">Nonsense</h3>
       <p>A codon becomes a stop signal and the protein is truncated mid-build. The fragment is usually degraded before it can fold, so the gene is effectively switched off.</p>
     </div>
     <div class="card">
-      <h3>Frameshift</h3>
+      <h3 id="s-frameshift">Frameshift</h3>
       <p>Insertions or deletions that are not multiples of three shift every downstream codon. Everything after the mutation is read wrong. These are typically the most destructive of all.</p>
     </div>
   </div>
@@ -619,11 +619,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== GEL ===== -->
 <section class="page" id="page-gel">
   <p class="kick">05 &middot; GADGET &middot; ELECTROPHORESIS</p>
-  <h2 class="hd">Run your digest on a gel</h2>
+  <h2 class="hd" id="s-run-your-digest-on-a-gel">Run your digest on a gel</h2>
   <p class="sub">Cut the sequence with real enzymes, then separate the pieces the way a bench does it. DNA is uniformly negative because of its phosphate backbone, so an electric field drags every fragment toward the positive electrode &mdash; and the agarose mesh holds the big ones back. Small fragments run far, large fragments barely move. Migration distance tracks the logarithm of fragment length, which is why the ladder rungs crowd together at the bottom.</p>
 
   <div class="panel">
-    <h3>Agarose gel simulator</h3>
+    <h3 id="s-agarose-gel-simulator">Agarose gel simulator</h3>
     <p class="note">LANE 1 LADDER &middot; LANE 2 UNCUT CONTROL &middot; LANE 3 YOUR DIGEST &middot; READS THE SYNTHESIZER SEQUENCE</p>
     <div class="gelgrid">
       <div>
@@ -658,19 +658,19 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 
   <div class="grid">
     <div class="card">
-      <h3>Why it separates at all</h3>
+      <h3 id="s-why-it-separates-at-all">Why it separates at all</h3>
       <p>Every nucleotide carries one negative phosphate, so charge scales with length just as mass does. The charge-to-mass ratio is effectively constant, which means the field alone cannot sort the fragments. The sieving effect of the gel matrix is doing all the work.</p>
     </div>
     <div class="card">
-      <h3>Reading a ladder</h3>
+      <h3 id="s-reading-a-ladder">Reading a ladder</h3>
       <p>A ladder is a mixture of known lengths run alongside the sample. You size an unknown band by where it lands between two ladder rungs. Because migration is logarithmic, estimates in the crowded lower region are much less precise than they look.</p>
     </div>
     <div class="card">
-      <h3>Voltage is a trade</h3>
+      <h3 id="s-voltage-is-a-trade">Voltage is a trade</h3>
       <p>Higher voltage finishes the run sooner but generates heat and lets fragments diffuse sideways, so bands smear and close sizes stop resolving. Lower percentage agarose opens the mesh for long fragments; higher percentage tightens it for short ones.</p>
     </div>
     <div class="card">
-      <h3>Seeing the DNA</h3>
+      <h3 id="s-seeing-the-dna">Seeing the DNA</h3>
       <p>DNA is colourless. An intercalating dye slides between the stacked bases and fluoresces orange under ultraviolet light, so the bands only appear once the lamp is on. That dye is a mutagen precisely because it inserts itself into the helix.</p>
     </div>
   </div>
@@ -679,15 +679,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== CODE ===== -->
 <section class="page" id="page-code">
   <p class="kick">06 &middot; THE GENETIC CODE</p>
-  <h2 class="hd">Sixty-four codons, twenty amino acids</h2>
+  <h2 class="hd" id="s-sixty-four-codons-twenty-amino-acids">Sixty-four codons, twenty amino acids</h2>
   <p class="sub">Three nucleotides specify one amino acid. Four bases in three positions gives sixty-four combinations mapping onto twenty amino acids plus one start and three stop signals. The code is nearly universal: the same table runs in bacteria, fungi, plants and humans.</p>
   <div class="panel">
-    <h3>Standard codon table</h3>
+    <h3 id="s-standard-codon-table">Standard codon table</h3>
     <p class="note">GREEN = START (AUG / METHIONINE) &middot; RED = STOP</p>
     <div class="codon-grid" id="codon-grid"></div>
   </div>
   <div class="panel">
-    <h3>Amino acid reference</h3>
+    <h3 id="s-amino-acid-reference">Amino acid reference</h3>
     <div class="scrollx"><table id="aa-table"><thead><tr><th>Code</th><th>Abbr</th><th>Name</th><th>Class</th><th>Codons</th></tr></thead><tbody id="aa-body"></tbody></table></div>
   </div>
 </section>
@@ -695,11 +695,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== CELL ===== -->
 <section class="page" id="page-cell">
   <p class="kick">07 &middot; FROM MOLECULE TO ORGANISM</p>
-  <h2 class="hd">How two metres fits in a nucleus</h2>
+  <h2 class="hd" id="s-how-two-metres-fits-in-a-nucleus">How two metres fits in a nucleus</h2>
   <p class="sub">DNA is not stored loose. It is wound, coiled and folded through six levels of organisation, and the tightness of that packing decides which genes a cell can even read.</p>
   <div class="grid wide" id="pack-grid"></div>
   <div class="panel" style="margin-top:16px">
-    <h3>Genome by the numbers</h3>
+    <h3 id="s-genome-by-the-numbers">Genome by the numbers</h3>
     <div class="scrollx"><table id="genome-table"><thead><tr><th>Organism</th><th>Genome size</th><th>Protein-coding genes</th><th>Chromosomes</th></tr></thead><tbody id="genome-body"></tbody></table></div>
     <p class="note" style="margin:11px 0 0">GENOME SIZE DOES NOT TRACK COMPLEXITY &mdash; THE LARGEST KNOWN ANIMAL GENOME BELONGS TO A LUNGFISH</p>
   </div>
@@ -708,7 +708,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== TIMELINE ===== -->
 <section class="page" id="page-timeline">
   <p class="kick">08 &middot; RECORD</p>
-  <h2 class="hd">How the helix was found and read</h2>
+  <h2 class="hd" id="s-how-the-helix-was-found-and-read">How the helix was found and read</h2>
   <p class="sub">Newest first. From base-editing therapies approved in the 2020s back to the first isolation of nuclein in a Tübingen laboratory in 1869.</p>
   <ul class="tl" id="tl-list"></ul>
 </section>
@@ -716,7 +716,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 <!-- ===== DRILL ===== -->
 <section class="page" id="page-drill">
   <p class="kick">09 &middot; SELF-TEST</p>
-  <h2 class="hd">Procedural drill</h2>
+  <h2 class="hd" id="s-procedural-drill">Procedural drill</h2>
   <p class="sub">Questions are generated from this page's own data every time you run the drill &mdash; complementary strands, codon translations, pairing rules and geometry. No two rounds are identical.</p>
   <div class="panel">
     <div class="btnrow" style="margin:0 0 14px">
@@ -2681,7 +2681,7 @@ if(document.readyState==='complete')start();else addEventListener('load',start);
 addEventListener('resize',sched);})();</script><script id="av-shell-20261124">/* AVIDAA shell: shared header (or floating pill) + footer with the "Last updated" stamp. No outside calls, no tracking.
    Template tokens are replaced when a page is built: DNA --av-knowledge Knowledge 2026-11-24 06:36 */
 (function(){
-  var NAME='DNA',SECTOR='--av-knowledge',STAMP='2026-11-25 14:28',HOME='https://avidaa1.github.io/';
+  var NAME='DNA',SECTOR='--av-knowledge',STAMP='2026-11-25 14:45',HOME='https://avidaa1.github.io/';
   var ARROW='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   function build(){
     if(!document.body||document.querySelector('.av-footer'))return;
@@ -3010,6 +3010,112 @@ addEventListener('resize',sched);})();</script><script id="av-shell-20261124">/*
   function init() { theme(); wordmark(); scan(); setTimeout(function () { wordmark(); scan(); }, 1800); try { new MutationObserver(later).observe(document.body, { childList: true, subtree: true }); } catch (e) {} }
   window.__avBrand = { led: function () { return led.length; }, anim: function () { return animCount; }, hue: HUE, max: MAX_LED };
   if (document.readyState === 'complete') setTimeout(init, 300); else addEventListener('load', function () { setTimeout(init, 300); });
+})();
+</script>
+<script id="av-search-20261125">/* AVIDAA site search entry + deep-link highlight v1. No network, no tracking.
+   1) A search button in the shared header (or beside the home pill) and Ctrl+K or "/" open the home search (all pages, sections, tools, games).
+   2) Landing from a search result (#section-id or #find=Section%20name): scroll to the section and highlight it briefly. */
+(function () {
+  'use strict';
+  if (window.__avSearch) return; window.__avSearch = 1;
+  var HOME = 'https://avidaa1.github.io/', isHome = location.hostname.indexOf('github.io') >= 0 && /^\/?(index\.html)?$/.test(location.pathname);
+  var reduced = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var css = '.av-sbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(5,8,24,.82);color:#fff;font:800 14px/1 system-ui,sans-serif;cursor:pointer;text-decoration:none;box-shadow:0 0 12px rgba(91,192,255,.3)}' +
+    '.av-sbtn:hover,.av-sbtn:focus-visible{outline:3px solid #FFD93D;outline-offset:2px}.av-sbtn svg{width:20px;height:20px}' +
+    '.av-sbtn.av-fixed{position:fixed;z-index:2147482500}' +
+    '.av-header .av-sbtn{margin-left:auto}' +
+    '@keyframes avHit{0%,100%{box-shadow:0 0 0 0 rgba(255,217,61,0)}30%{box-shadow:0 0 0 6px rgba(255,217,61,.75),0 0 30px 8px rgba(255,217,61,.55)}}' +
+    '.av-hit{outline:3px solid #FFD93D!important;outline-offset:4px;border-radius:6px;animation:avHit 1.1s ease-in-out 2}' +
+    '@media (prefers-reduced-motion:reduce){.av-hit{animation:none}}';
+  try { if (window.CSSStyleSheet && CSSStyleSheet.prototype.replaceSync && 'adoptedStyleSheets' in document) { var sh = new CSSStyleSheet(); sh.replaceSync(css); document.adoptedStyleSheets = document.adoptedStyleSheets.concat([sh]); } else throw 0; }
+  catch (e) { var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }
+  function goSearch(q) { location.href = HOME + '?search=1' + (q ? '&q=' + encodeURIComponent(q) : ''); }
+  function mkBtn() {
+    var b = document.createElement('a'); b.className = 'av-sbtn'; b.href = HOME + '?search=1'; b.setAttribute('aria-label', 'Search all AVIDAA pages');
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span class="av-slbl">Search</span>';
+    return b;
+  }
+  var UI = 'a,button,input,select,textarea,[onclick],[role=button]';
+  function busy(l, t, w, h, self) {
+    for (var yy = 0; yy < 3; yy++) for (var xx = 0; xx < 3; xx++) {
+      var els = document.elementsFromPoint(l + w * (xx + .5) / 3, t + h * (yy + .5) / 3);
+      for (var q = 0; q < els.length; q++) { if (els[q] === self || self.contains(els[q])) continue; if (els[q].matches && els[q].matches(UI)) return true; }
+    } return false;
+  }
+  function place() {
+    if (isHome || document.querySelector('.av-sbtn')) return;
+    var b = mkBtn(), hdr = document.querySelector('.av-header');
+    if (hdr) { hdr.appendChild(b); var hb = b.getBoundingClientRect(); if (hb.right > innerWidth + 1 || hb.left < 0) { b.querySelector('.av-slbl').style.display = 'none'; } return; }
+    var pill = document.querySelector('.av-pill'); if (!pill) return;
+    b.classList.add('av-fixed'); document.body.appendChild(b);
+    var pr = pill.getBoundingClientRect(), bw = b.getBoundingClientRect(), W = bw.width, H = bw.height;
+    var spots = [[pr.right + 8, pr.top], [pr.left - W - 8, pr.top], [pr.left, pr.bottom + 8], [pr.left, pr.top - H - 8]];
+    for (var i = 0; i < spots.length; i++) {
+      var l = spots[i][0], t = spots[i][1]; if (l < 4 || t < 4 || l + W > innerWidth - 4 || t + H > innerHeight - 4) continue;
+      b.style.left = l + 'px'; b.style.top = t + 'px'; if (!busy(l, t, W, H, b)) return;
+    }
+    b.querySelector('.av-slbl').style.display = 'none'; b.remove();   /* no free spot: no button, keyboard shortcut still works */
+  }
+  document.addEventListener('keydown', function (e) {
+    var k = (e.key || '').toLowerCase(), tg = ((document.activeElement || {}).tagName || '');
+    if (isHome) return;
+    if ((e.ctrlKey || e.metaKey) && k === 'k') { e.preventDefault(); goSearch(); }
+    else if (k === '/' && !/INPUT|TEXTAREA|SELECT/.test(tg) && !(document.activeElement && document.activeElement.isContentEditable)) { e.preventDefault(); goSearch(); }
+  });
+  /* ---------- landing from a search result ---------- */
+  var INV = /[​-‏‪-‮⁠-⁤﻿­]/g;
+  function norm(t) { return String(t || '').replace(INV, '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim(); }
+  function visible(el) { return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); }
+  function ntext(e) { return norm(e.innerText || e.textContent); }
+  function findByText(t) {
+    var n = norm(t).slice(0, 90), pri = 'h1,h2,h3,h4,h5,[role=tab],button,.tab,.nav-btn,dt,summary,strong,b,[class*="name"],[class*="title"]', best = null, i, x;
+    var els = document.querySelectorAll(pri);
+    for (i = 0; i < els.length; i++) { x = ntext(els[i]); if (x === n) return els[i]; if (!best && x.indexOf(n) === 0 && x.length < n.length + 30) best = els[i]; }
+    if (best) return best;
+    var all = document.body.querySelectorAll('*'), lim = Math.min(all.length, 8000);
+    for (i = 0; i < lim; i++) { var e = all[i]; if (e.children.length > 3 || e.tagName === 'SCRIPT' || e.tagName === 'STYLE') continue; x = ntext(e); if (x === n) return e; }
+    return null;
+  }
+  function esc(v) { return String(v).replace(/["\\]/g, ''); }
+  function controllers(id) {
+    var keys = Array.isArray(id) ? id.slice() : [id]; id = keys[0] || ''; var k2 = id.replace(/^(page|pg|p|panel|tab|sec|section|view|screen)[-_]/i, ''); if (k2 && k2 !== id) keys.push(k2);
+    var sel = [];
+    keys.forEach(function (k) { k = esc(k);
+      sel.push('[aria-controls="' + k + '"]', '[data-tab="' + k + '"]', '[data-target="' + k + '"]', '[data-panel="' + k + '"]', '[data-page="' + k + '"]', '[data-p="' + k + '"]', '[data-view="' + k + '"]', '[data-section="' + k + '"]', 'a[href="#' + k + '"]',
+        '[onclick*="\'' + k + '\'"]', '[onclick*="\\"' + k + '\\""]', '[data-go="' + k + '"]', '[data-nav="' + k + '"]', '[data-open="' + k + '"]', '#nb-' + k, '#nav-' + k, '#tab-' + k, '#btn-' + k, '#np-' + k, '#t-' + k, '#n-' + k);
+    });
+    try { return [].slice.call(document.querySelectorAll(sel.join(','))); } catch (e) { return []; }
+  }
+  function reveal(el) {
+    for (var tries = 0; tries < 5 && !visible(el); tries++) {
+      var hid = null;
+      for (var p = el; p && p !== document.body; p = p.parentElement) { if (!visible(p)) { hid = p; } else if (hid) break; }
+      var cur = el, target = null; for (var q = el; q && q !== document.body; q = q.parentElement) { if (!visible(q) && (q.id || (q.getAttribute && (q.getAttribute('data-path') || q.getAttribute('data-cat'))))) { target = q; } }
+      if (!target) target = hid; if (!target) break;
+      var ks = []; if (target.id) ks.push(target.id); ['data-path', 'data-cat', 'data-tab', 'data-page', 'data-id', 'data-key'].forEach(function (at) { var v = target.getAttribute && target.getAttribute(at); if (v) ks.push(v); }); if (!ks.length) break;
+      var cs = controllers(ks); if (!cs.length) break;
+      for (var c = 0; c < cs.length; c++) { try { cs[c].click(); } catch (e) {} if (visible(el)) return; }
+    }
+  }
+  function flash(el) {
+    try { el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); } catch (e) { el.scrollIntoView(); }
+    el.classList.add('av-hit'); setTimeout(function () { el.classList.remove('av-hit'); }, 3200);
+  }
+  function land() {
+    var h = location.hash; if (!h || h.length < 2) return;
+    var want = null, byId = null;
+    try { if (h.indexOf('#find=') === 0) want = decodeURIComponent(h.slice(6)); else byId = decodeURIComponent(h.slice(1)); } catch (e) { return; }
+    var tries = 0;
+    (function attempt() {
+      var el = byId ? document.getElementById(byId) : (want ? findByText(want) : null);
+      if (el) { if (!visible(el)) reveal(el); if (visible(el)) { flash(el); return; } }
+      if (++tries < 22) setTimeout(attempt, 400);
+    })();
+  }
+  window.__avSearch = { goSearch: goSearch, land: land, findByText: findByText };
+  function init() { place(); setTimeout(place, 1500); land(); }
+  if (document.readyState === 'complete') setTimeout(init, 200); else addEventListener('load', function () { setTimeout(init, 200); });
+  addEventListener('hashchange', land);
 })();
 </script>
 </body>
